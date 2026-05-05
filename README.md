@@ -1,7 +1,7 @@
 # 🏢 TimiOA 天美OA
 
 <p align="center">
-  <img alt="logo" src="https://cdn.exmay.com/exmay/exmay-app/static/images/timioa_logo.png">
+  <img alt="logo" src="https://cdn.exmay.com/exmay/exmay-app/static/images/timioa_logo.png" width="150" height="150" style="border">
   <strong>✨ 智慧、简约而不简单、实用且易用的OA自动化办公系统平台</strong>
 </p>
 
