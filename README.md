@@ -1,13 +1,13 @@
-# 🏢 TimiOA 天美OA
-
 <p align="center">
   <img alt="logo" src="https://cdn.exmay.com/exmay/exmay-app/static/images/timioa_logo.png" width="150" height="150" style="border">
-  <strong>✨ 智慧、简约而不简单、实用且易用的OA自动化办公系统平台</strong>
 </p>
 
-<p align="center">
-  🤖 AI 驱动 • 💬 IM 赋能 • 🚀 企业级数智化高效办公平台
-</p>
+<div align="center">
+  <br />
+  <h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">TimiOA 天美OA 企业级数智化高效办公平台 v1.0.0</h1>
+  <h3>✨ 智慧、简约而不简单、实用且易用的OA自动化办公系统平台</h3>
+  <p>🤖 AI 驱动 • 💬 IM 赋能 • 🚀 企业级数智化高效办公平台</p>
+</div>
 
 <p align="center">
   <a href="#">
