@@ -1,0 +1,477 @@
+/**
+ * TimiOA 全局样式 - 现代化设计系统
+ * Design System v2.0 - Modern & Fashionable
+ */
+
+/* ============================================
+   CSS 变量定义
+   ============================================ */
+:root {
+  /* 主色调 - 现代渐变蓝 */
+  --timi-primary: #4f46e5;
+  --timi-primary-light: #818cf8;
+  --timi-primary-dark: #3730a3;
+  --timi-primary-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  
+  /* 辅助色 */
+  --timi-success: #10b981;
+  --timi-success-light: #34d399;
+  --timi-warning: #f59e0b;
+  --timi-warning-light: #fbbf24;
+  --timi-error: #ef4444;
+  --timi-error-light: #f87171;
+  --timi-info: #06b6d4;
+  --timi-info-light: #22d3ee;
+  
+  /* 中性色 - 现代灰度 */
+  --timi-gray-50: #f9fafb;
+  --timi-gray-100: #f3f4f6;
+  --timi-gray-200: #e5e7eb;
+  --timi-gray-300: #d1d5db;
+  --timi-gray-400: #9ca3af;
+  --timi-gray-500: #6b7280;
+  --timi-gray-600: #4b5563;
+  --timi-gray-700: #374151;
+  --timi-gray-800: #1f2937;
+  --timi-gray-900: #111827;
+  
+  /* 文字颜色 */
+  --timi-text-primary: #111827;
+  --timi-text-secondary: #4b5563;
+  --timi-text-tertiary: #6b7280;
+  --timi-text-quaternary: #9ca3af;
+  
+  /* 背景色 */
+  --timi-bg-primary: #ffffff;
+  --timi-bg-secondary: #f9fafb;
+  --timi-bg-tertiary: #f3f4f6;
+  --timi-bg-elevated: #ffffff;
+  
+  /* 边框颜色 */
+  --timi-border-color: #e5e7eb;
+  --timi-border-color-light: #f3f4f6;
+  --timi-divider-color: #e5e7eb;
+  
+  /* 阴影系统 - 现代层次感 */
+  --timi-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --timi-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --timi-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --timi-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --timi-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --timi-shadow-glow: 0 0 20px rgba(79, 70, 229, 0.3);
+  
+  /* 圆角系统 */
+  --timi-radius-sm: 6px;
+  --timi-radius-md: 8px;
+  --timi-radius-lg: 12px;
+  --timi-radius-xl: 16px;
+  --timi-radius-2xl: 24px;
+  --timi-radius-full: 9999px;
+  
+  /* 间距系统 */
+  --timi-space-1: 4px;
+  --timi-space-2: 8px;
+  --timi-space-3: 12px;
+  --timi-space-4: 16px;
+  --timi-space-5: 20px;
+  --timi-space-6: 24px;
+  --timi-space-8: 32px;
+  --timi-space-10: 40px;
+  --timi-space-12: 48px;
+  
+  /* 布局尺寸 */
+  --timi-sidebar-width: 260px;
+  --timi-sidebar-collapsed-width: 72px;
+  --timi-header-height: 72px;
+  --timi-content-max-width: 1440px;
+  
+  /* 字体 */
+  --timi-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --timi-font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  
+  /* 过渡动画 */
+  --timi-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --timi-transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --timi-transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --timi-transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ============================================
+   基础样式重置
+   ============================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: var(--timi-font-family);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--timi-text-primary);
+  background: var(--timi-bg-secondary);
+}
+
+#app {
+  height: 100%;
+  min-height: 100vh;
+}
+
+/* ============================================
+   滚动条样式 - 现代化
+   ============================================ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--timi-gray-300);
+  border-radius: var(--timi-radius-full);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--timi-gray-400);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* ============================================
+   选择文本样式
+   ============================================ */
+::selection {
+  background: var(--timi-primary-light);
+  color: white;
+}
+
+/* ============================================
+   链接样式
+   ============================================ */
+a {
+  color: var(--timi-primary);
+  text-decoration: none;
+  transition: color var(--timi-transition-fast);
+}
+
+a:hover {
+  color: var(--timi-primary-dark);
+}
+
+/* ============================================
+   动画效果
+   ============================================ */
+
+/* 淡入淡出 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--timi-transition-base);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 向上滑入 */
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all var(--timi-transition-base);
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* 向下滑入 */
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: all var(--timi-transition-base);
+}
+
+.slide-down-enter-from,
+.slide-down-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* 缩放入场 */
+.scale-enter-active,
+.scale-leave-active {
+  transition: all var(--timi-transition-bounce);
+}
+
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* 模糊入场 */
+.blur-enter-active,
+.blur-leave-active {
+  transition: all var(--timi-transition-slow);
+}
+
+.blur-enter-from,
+.blur-leave-to {
+  opacity: 0;
+  filter: blur(10px);
+}
+
+/* 弹跳动画 */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* 脉冲动画 */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* 旋转动画 */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* 渐变背景动画 */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 悬浮效果 */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* 闪烁效果 */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ============================================
+   通用工具类
+   ============================================ */
+
+/* 文字工具类 */
+.text-primary { color: var(--timi-text-primary); }
+.text-secondary { color: var(--timi-text-secondary); }
+.text-tertiary { color: var(--timi-text-tertiary); }
+.text-quaternary { color: var(--timi-text-quaternary); }
+.text-success { color: var(--timi-success); }
+.text-warning { color: var(--timi-warning); }
+.text-error { color: var(--timi-error); }
+.text-info { color: var(--timi-info); }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-xs { font-size: 12px; }
+.text-sm { font-size: 13px; }
+.text-base { font-size: 14px; }
+.text-lg { font-size: 16px; }
+.text-xl { font-size: 18px; }
+.text-2xl { font-size: 20px; }
+.text-3xl { font-size: 24px; }
+
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+/* 背景工具类 */
+.bg-primary { background: var(--timi-bg-primary); }
+.bg-secondary { background: var(--timi-bg-secondary); }
+.bg-tertiary { background: var(--timi-bg-tertiary); }
+.bg-gradient { background: var(--timi-primary-gradient); }
+
+/* 间距工具类 */
+.m-0 { margin: 0; }
+.m-1 { margin: var(--timi-space-1); }
+.m-2 { margin: var(--timi-space-2); }
+.m-3 { margin: var(--timi-space-3); }
+.m-4 { margin: var(--timi-space-4); }
+.m-5 { margin: var(--timi-space-5); }
+.m-6 { margin: var(--timi-space-6); }
+
+.p-0 { padding: 0; }
+.p-1 { padding: var(--timi-space-1); }
+.p-2 { padding: var(--timi-space-2); }
+.p-3 { padding: var(--timi-space-3); }
+.p-4 { padding: var(--timi-space-4); }
+.p-5 { padding: var(--timi-space-5); }
+.p-6 { padding: var(--timi-space-6); }
+
+/* 圆角工具类 */
+.rounded-sm { border-radius: var(--timi-radius-sm); }
+.rounded-md { border-radius: var(--timi-radius-md); }
+.rounded-lg { border-radius: var(--timi-radius-lg); }
+.rounded-xl { border-radius: var(--timi-radius-xl); }
+.rounded-2xl { border-radius: var(--timi-radius-2xl); }
+.rounded-full { border-radius: var(--timi-radius-full); }
+
+/* 阴影工具类 */
+.shadow-xs { box-shadow: var(--timi-shadow-xs); }
+.shadow-sm { box-shadow: var(--timi-shadow-sm); }
+.shadow-md { box-shadow: var(--timi-shadow-md); }
+.shadow-lg { box-shadow: var(--timi-shadow-lg); }
+.shadow-xl { box-shadow: var(--timi-shadow-xl); }
+.shadow-glow { box-shadow: var(--timi-shadow-glow); }
+
+/* Flex 工具类 */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.flex-1 { flex: 1; }
+.gap-1 { gap: var(--timi-space-1); }
+.gap-2 { gap: var(--timi-space-2); }
+.gap-3 { gap: var(--timi-space-3); }
+.gap-4 { gap: var(--timi-space-4); }
+
+/* 过渡工具类 */
+.transition-fast { transition: all var(--timi-transition-fast); }
+.transition-base { transition: all var(--timi-transition-base); }
+.transition-slow { transition: all var(--timi-transition-slow); }
+
+/* 光标工具类 */
+.cursor-pointer { cursor: pointer; }
+.cursor-not-allowed { cursor: not-allowed; }
+
+/* 溢出工具类 */
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ============================================
+   卡片样式
+   ============================================ */
+.timi-card {
+  background: var(--timi-bg-primary);
+  border-radius: var(--timi-radius-xl);
+  box-shadow: var(--timi-shadow-sm);
+  border: 1px solid var(--timi-border-color-light);
+  transition: all var(--timi-transition-base);
+}
+
+.timi-card:hover {
+  box-shadow: var(--timi-shadow-md);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   按钮样式增强
+   ============================================ */
+.timi-btn-gradient {
+  background: var(--timi-primary-gradient);
+  border: none;
+  color: white;
+  font-weight: 500;
+  box-shadow: var(--timi-shadow-sm);
+  transition: all var(--timi-transition-base);
+}
+
+.timi-btn-gradient:hover {
+  box-shadow: var(--timi-shadow-md), var(--timi-shadow-glow);
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   输入框样式增强
+   ============================================ */
+.timi-input-modern {
+  border-radius: var(--timi-radius-lg);
+  border: 1px solid var(--timi-border-color);
+  background: var(--timi-bg-primary);
+  transition: all var(--timi-transition-fast);
+}
+
+.timi-input-modern:focus {
+  border-color: var(--timi-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* ============================================
+   玻璃态效果
+   ============================================ */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   渐变文字
+   ============================================ */
+.gradient-text {
+  background: var(--timi-primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   加载动画
+   ============================================ */
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--timi-gray-200) 25%,
+    var(--timi-gray-100) 50%,
+    var(--timi-gray-200) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ============================================
+   响应式断点
+   ============================================ */
+@media (max-width: 768px) {
+  :root {
+    --timi-sidebar-width: 0;
+  }
+}

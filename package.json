@@ -1,0 +1,74 @@
+{
+  "name": "timioa",
+  "version": "1.0.0",
+  "description": "TimiOA 天美OA - AI驱动+IM赋能的智慧办公自动化系统",
+  "author": "GitCoffee Team",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/interaction": "^6.1.15",
+    "@fullcalendar/timegrid": "^6.1.15",
+    "@fullcalendar/vue3": "^6.1.15",
+    "@gitcoffee/app": "^1.0.0",
+    "@gitcoffee/design-ui": "^1.0.0",
+    "@gitcoffee/icons": "^1.0.0",
+    "@gitcoffee/theme-ui": "^1.0.0",
+    "@gitcoffee/timioa-ui": "^1.0.0",
+    "@gitcoffee/timioa-utils": "^1.0.0",
+    "ant-design-vue": "^4.2.6",
+    "axios": "^1.7.9",
+    "dayjs": "^1.11.13",
+    "echarts": "^5.5.1",
+    "pinia": "^2.3.0",
+    "vue": "^3.5.13",
+    "vue-echarts": "^7.0.3",
+    "vue-i18n": "^10.0.5",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.2",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "eslint": "^9.17.0",
+    "eslint-plugin-vue": "^9.32.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.2",
+    "vite": "^6.0.3",
+    "vue-eslint-parser": "^9.4.3",
+    "vue-tsc": "^2.1.10"
+  },
+  "keywords": [
+    "timioa",
+    "oa",
+    "office",
+    "automation",
+    "ai",
+    "im",
+    "vue3"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitcoffee-os/timioa.git"
+  },
+  "homepage": "https://github.com/gitcoffee-os/timioa#readme",
+  "bugs": {
+    "url": "https://github.com/gitcoffee-os/timioa/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
